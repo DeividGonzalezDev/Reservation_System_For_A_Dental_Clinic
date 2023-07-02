@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.dh.dental_clinic.entity.HomeAddress;
 import com.dh.dental_clinic.exceptions.NoEntityToUpdateException;
+import com.dh.dental_clinic.exceptions.NoEntityToDeleteException;
 import com.dh.dental_clinic.repository.IHomeAddressRepository;
 import com.dh.dental_clinic.services.IHomeAddressService;
 
@@ -62,14 +63,14 @@ public class HomeAddressService implements IHomeAddressService{
    * @param id El ID de la entidad HomeAddress a eliminar.
    * @return true si la eliminación se realiza correctamente, false en caso contrario.
    */
-  public Boolean deleteById(UUID id) {
+  public Boolean deleteById(UUID id) throws NoEntityToDeleteException {
     Optional<HomeAddress> homeAddress = findById(id);
     if(homeAddress.isPresent()){
       homeAddressRepository.deleteById(id);
       return true;
     
     }
-    return false;  
+    throw new NoEntityToDeleteException(id);  
   }
 
   @Override

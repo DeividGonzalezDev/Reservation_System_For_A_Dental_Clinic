@@ -17,6 +17,7 @@ import com.dh.dental_clinic.repository.IDentistRepository;
 import com.dh.dental_clinic.repository.IHomeAddressRepository;
 import com.dh.dental_clinic.services.IDentistService;
 import com.dh.dental_clinic.utils.ConvertTo;
+import com.dh.dental_clinic.utils.IdGenerator;
 
 import jakarta.validation.Valid;
 import lombok.extern.log4j.Log4j2;
@@ -29,9 +30,9 @@ import lombok.extern.log4j.Log4j2;
 public class DentistService implements IDentistService{
 
   @Autowired
-  IDentistRepository dentistRepository; // Inyección de dependencia del repositorio
+  private IDentistRepository dentistRepository; // Inyección de dependencia del repositorio
   @Autowired
-  IHomeAddressRepository homeAddressRepository;
+  private HomeAddressService homeAddressService;
 
   /**
    * Crea un nuevo dentista en la base de datos.
@@ -42,12 +43,13 @@ public class DentistService implements IDentistService{
    */
   @Override
   public DentistDTO save(@Valid Dentist dentist) throws TheEntityAlredyExistsException {
+    dentist.setId(IdGenerator.guid(dentist.getLicenseNumber()));
     Optional<DentistDTO> dentistDTO = findById(dentist.getId());
     if(!(dentistDTO.isPresent())){
       HomeAddress homeAddress = dentist.getHomeAddress();
       if(!(homeAddress == null)){
         dentist.setHomeAddress(homeAddress);
-        homeAddressRepository.save(homeAddress);
+        homeAddressService.save(homeAddress);
       }
       Dentist saveDentist = dentistRepository.save(dentist);
       return ConvertTo.dto(saveDentist, DentistDTO.class);
@@ -119,7 +121,7 @@ public class DentistService implements IDentistService{
       HomeAddress homeAddress = dentist.getHomeAddress();
       if(!(homeAddress == null)){
         dentist.setHomeAddress(homeAddress);
-        homeAddressRepository.save(homeAddress);
+        homeAddressService.save(homeAddress);
       }
       Dentist saveDentist = dentistRepository.save(dentist);
       return ConvertTo.dto(saveDentist, DentistDTO.class);

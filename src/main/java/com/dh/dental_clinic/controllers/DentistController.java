@@ -37,7 +37,6 @@ public class DentistController {
   @GetMapping("/findAll")
   public ResponseEntity<List<DentistDTO>> findAll() {
     List<DentistDTO> dentists = dentistService.findAll();
-
     return ResponseEntity.ok(dentists);
   }
 

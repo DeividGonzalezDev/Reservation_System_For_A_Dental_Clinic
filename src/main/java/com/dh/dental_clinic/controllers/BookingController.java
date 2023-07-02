@@ -17,7 +17,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.dh.dental_clinic.dto.BookingDTO;
 import com.dh.dental_clinic.entity.Booking;
+import com.dh.dental_clinic.exceptions.NoEntityToDeleteException;
 import com.dh.dental_clinic.exceptions.NoEntityToUpdateException;
+import com.dh.dental_clinic.exceptions.TheEntityAlredyExistsException;
+import com.dh.dental_clinic.exceptions.TheNecessaryEntitiesForTheOperationDoNotExistException;
 import com.dh.dental_clinic.services.impl.BookingService;
 
 @RestController
@@ -41,17 +44,17 @@ public class BookingController {
   }
 
   @PostMapping("/save")
-  public ResponseEntity<BookingDTO> save(@RequestBody Booking booking){
+  public ResponseEntity<BookingDTO> save(@RequestBody Booking booking) throws TheEntityAlredyExistsException, TheNecessaryEntitiesForTheOperationDoNotExistException{
     return ResponseEntity.ok(bookingService.save(booking));
   }
 
   @PutMapping("/update") 
-  public ResponseEntity<BookingDTO> update(@RequestBody Booking booking) throws NoEntityToUpdateException{
+  public ResponseEntity<BookingDTO> update(@RequestBody Booking booking) throws NoEntityToUpdateException, TheNecessaryEntitiesForTheOperationDoNotExistException{
     return ResponseEntity.ok(bookingService.update(booking));
   }
 
   @DeleteMapping("/deleteById")
-  public ResponseEntity<Boolean> deleteById(@RequestParam UUID id){
+  public ResponseEntity<Boolean> deleteById(@RequestParam UUID id) throws NoEntityToDeleteException{
     return ResponseEntity.ok(bookingService.deleteById(id));
   }
 }

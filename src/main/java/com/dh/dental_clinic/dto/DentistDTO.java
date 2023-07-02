@@ -1,13 +1,20 @@
 package com.dh.dental_clinic.dto;
 
+import java.util.UUID;
+
 import com.dh.dental_clinic.entity.HomeAddress;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 import lombok.Getter;
 import lombok.Setter;
-
+import lombok.ToString;
+@ToString
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class DentistDTO {
+  @Getter
+  @Setter
+  private UUID id;
+
   @Getter
   @Setter
   private String name;

@@ -54,9 +54,16 @@ public class ConvertTo {
    * @param <D>       El tipo de la entidad.
    * @return La entidad convertida.
    */
-  public static <E, D> D entity(E dtoEntity, Class<D> entity, Map<?, ?> extraParamsToAdd) {
+  public static <E, D> D entity(E dtoEntity, Class<D> entity, Map<String, Object> extraParamsToAdd) {
     D entityConverted = OBJECT_MAPPER.convertValue(dtoEntity, entity);
-     ((Map) entityConverted).putAll(extraParamsToAdd);
+
+    if(entityConverted instanceof Map){
+      ((Map) entityConverted).putAll(extraParamsToAdd);
+    }else{
+      Map<String, Object> entityMap = OBJECT_MAPPER.convertValue(entityConverted, Map.class);
+    entityMap.putAll(extraParamsToAdd);
+    entityConverted = OBJECT_MAPPER.convertValue(entityMap, entity);
+    }
     return entityConverted;
   }
 }
