@@ -1,0 +1,552 @@
+2023-07-07 00:06:41,066 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 152707 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 00:06:41,094 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 00:06:44,179 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 3.301 seconds (process running for 10920.225)
+2023-07-07 00:06:44,465 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 00:06:44 UYT 2023, homeAddress=null)
+2023-07-07 00:06:44,465 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 00:06:44,499 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 00:15:20,268 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-9] Autenticando al usuario null
+2023-07-07 00:15:20,378 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] NONE_PROVIDED
+2023-07-07 00:15:20,384 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional.empty
+2023-07-07 00:15:20,502 ERROR c.d.d.c.b.BaseController [http-nio-8080-exec-9] There has been an un controlled exception
+org.springframework.security.authentication.BadCredentialsException: Bad credentials
+	at org.springframework.security.authentication.dao.AbstractUserDetailsAuthenticationProvider.authenticate(AbstractUserDetailsAuthenticationProvider.java:141)
+	at org.springframework.security.authentication.ProviderManager.authenticate(ProviderManager.java:182)
+	at com.dh.dental_clinic.controllers.AuthenticateController.authenticate(AuthenticateController.java:38)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:578)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:207)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:152)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:110)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:131)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:85)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at com.dh.dental_clinic.filters.JwtRequestFilter.doFilterInternal(JwtRequestFilter.java:68)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:390)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-07-07 00:17:01,480 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-10] Autenticando al usuario admin
+2023-07-07 00:17:01,481 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 00:17:01,486 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:17:01,622 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:17:01,623 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 00:17:01,627 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:17:01,627 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-10] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:17:01,627 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:17:01,631 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-10] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODYyMSwiaWF0IjoxNjg4Njk5ODIxLCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.4BzgikydJ54GNIc6r3O96WF-blOgunPrutk9wALSHLQ
+2023-07-07 00:17:01,677 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] admin
+2023-07-07 00:17:01,688 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:17:01,694 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 00:18:07,815 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-4] Autenticando al usuario admin
+2023-07-07 00:18:07,815 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 00:18:07,818 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:07,922 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:18:07,922 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 00:18:07,926 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:07,926 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-4] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:18:07,926 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:18:07,927 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-4] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODY4NywiaWF0IjoxNjg4Njk5ODg3LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.Cr2JsD6Q-TfQgjALJ-TecDhlXIqmyzzNFuP31LCvHp0
+2023-07-07 00:18:07,944 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] admin
+2023-07-07 00:18:07,947 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:07,948 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 00:18:38,432 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Autenticando al usuario admin
+2023-07-07 00:18:38,432 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 00:18:38,435 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:38,538 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:18:38,538 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 00:18:38,541 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:38,541 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:18:38,541 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:18:38,542 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODcxOCwiaWF0IjoxNjg4Njk5OTE4LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.F7gve4majwSB6D5OSQFxdCmP8IWG6OFgJ06ne3vn0FE
+2023-07-07 00:18:38,558 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] admin
+2023-07-07 00:18:38,565 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:18:38,565 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 00:19:19,825 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-6] Autenticando al usuario admin
+2023-07-07 00:19:19,825 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 00:19:19,829 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:19,932 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 00:19:19,933 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 00:19:19,936 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:19,936 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-6] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:19:19,936 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 00:19:19,937 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-6] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODc1OSwiaWF0IjoxNjg4Njk5OTU5LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.C2OchuwpslQ78VOZoagG4Xx2r_-hmGVTJ-gLZ5OQZYQ
+2023-07-07 00:19:19,947 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 00:19:19,951 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:19,951 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:19:38,503 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-3] Autenticando al usuario admin
+2023-07-07 00:19:38,503 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] admin
+2023-07-07 00:19:38,506 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:38,617 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 00:19:38,617 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] admin
+2023-07-07 00:19:38,620 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:38,620 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-3] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:19:38,620 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 00:19:38,622 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-3] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODc3OCwiaWF0IjoxNjg4Njk5OTc4LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.Wl94uEeJ0vCjax_50gNCVIr9UnilOnOTlMFcAJJzN0c
+2023-07-07 00:19:38,635 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 00:19:38,645 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:19:38,645 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:20:54,481 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] USER
+2023-07-07 00:20:54,491 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-8] Autenticando al usuario admin
+2023-07-07 00:20:54,491 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] admin
+2023-07-07 00:20:54,498 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:20:54,605 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 00:20:54,605 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] admin
+2023-07-07 00:20:54,609 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:20:54,609 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-8] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:20:54,609 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 00:20:54,610 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-8] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyODg1NCwiaWF0IjoxNjg4NzAwMDU0LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.j7zKZlmZ5PvU4X-uKx6goMMD4kBxo2_9jpdUNKgiNHE
+2023-07-07 00:32:05,623 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-1] Autenticando al usuario admin
+2023-07-07 00:32:05,673 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] admin
+2023-07-07 00:32:05,676 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:32:05,778 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 00:32:05,778 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] admin
+2023-07-07 00:32:05,782 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:32:05,782 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-1] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:32:05,782 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 00:32:05,783 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-1] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODcyOTUyNSwiaWF0IjoxNjg4NzAwNzI1LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.Mf0n55CaYRpqCgpMQyOQcsiKTehDoqx2xnT6JdvEF9I
+2023-07-07 00:32:05,800 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 00:32:05,812 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:32:05,812 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:41:13,686 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] username: admin
+2023-07-07 00:41:13,733 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] context: null
+2023-07-07 00:41:13,734 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] admin
+2023-07-07 00:41:13,768 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:13,769 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:13,780 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 00:41:13,783 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 00:41:13,785 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] authority: [ADMIN]
+2023-07-07 00:41:27,702 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] username: admin
+2023-07-07 00:41:27,703 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] context: null
+2023-07-07 00:41:27,703 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] admin
+2023-07-07 00:41:27,708 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:27,708 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:27,712 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 00:41:27,716 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 00:41:27,716 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] authority: [ADMIN]
+2023-07-07 00:41:30,827 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] username: admin
+2023-07-07 00:41:30,828 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] context: null
+2023-07-07 00:41:30,828 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] admin
+2023-07-07 00:41:30,833 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:30,833 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:30,840 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 00:41:30,845 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 00:41:30,846 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] authority: [ADMIN]
+2023-07-07 00:41:41,148 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] username: admin
+2023-07-07 00:41:41,149 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] context: null
+2023-07-07 00:41:41,149 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] admin
+2023-07-07 00:41:41,152 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:41,152 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:41,166 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 00:41:41,173 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 00:41:41,175 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] authority: [ADMIN]
+2023-07-07 00:41:41,223 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-1] Optional.empty
+2023-07-07 00:41:42,672 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 00:41:42,672 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 00:41:42,672 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 00:41:42,687 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:42,689 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:42,699 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:41:42,701 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:41:42,704 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 00:41:49,787 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] username: admin
+2023-07-07 00:41:49,787 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] context: null
+2023-07-07 00:41:49,787 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 00:41:49,806 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:49,806 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:49,812 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:41:49,813 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:41:49,813 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] authority: [ADMIN]
+2023-07-07 00:41:51,697 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] username: admin
+2023-07-07 00:41:51,697 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] context: null
+2023-07-07 00:41:51,698 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 00:41:51,701 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:51,702 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:51,705 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:41:51,706 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:41:51,707 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] authority: [ADMIN]
+2023-07-07 00:41:53,792 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 00:41:53,795 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 00:41:53,797 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 00:41:53,803 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:41:53,803 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:41:53,808 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:41:53,820 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 00:41:53,822 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 00:42:01,719 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] username: admin
+2023-07-07 00:42:01,719 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] context: null
+2023-07-07 00:42:01,719 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 00:42:01,727 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:42:01,728 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:42:01,736 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:42:01,736 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 00:42:01,736 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] authority: [ADMIN]
+2023-07-07 00:42:01,847 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-10] Booking(id=9d848d07-ab0e-31c8-bf4e-c10f88f7b685, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=null, surname=null, licenseNumber=null, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=null, surname=null, dni=0, dischargedDate=Fri Jul 07 00:42:01 UYT 2023, homeAddress=null))
+2023-07-07 00:42:01,868 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-10] Optional[Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=1e40db92-93ea-4737-8a11-75079c4b2c47, address=Tacuarembó, number=null, location=null, province=null))]
+2023-07-07 00:42:01,900 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-10] Booking(id=9d848d07-ab0e-31c8-bf4e-c10f88f7b685, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=null, address=Tacuarembó, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Thu Jul 06 21:00:00 UYT 2023, homeAddress=null))
+2023-07-07 00:42:01,919 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-10] THE ULTIMATE BOOKING: Booking(id=9d848d07-ab0e-31c8-bf4e-c10f88f7b685, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=1e40db92-93ea-4737-8a11-75079c4b2c47, address=Tacuarembó, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=2023-07-07 00:06:44.447, homeAddress=null))
+2023-07-07 00:42:04,227 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] username: admin
+2023-07-07 00:42:04,227 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] context: null
+2023-07-07 00:42:04,228 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 00:42:04,233 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:42:04,241 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:42:04,263 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:42:04,263 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 00:42:04,263 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] authority: [ADMIN]
+2023-07-07 00:59:04,332 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] username: admin
+2023-07-07 00:59:04,332 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] context: null
+2023-07-07 00:59:04,332 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] admin
+2023-07-07 00:59:04,343 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:59:04,344 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:59:04,347 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 00:59:04,352 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 00:59:04,358 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] authority: [ADMIN]
+2023-07-07 00:59:07,434 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] username: admin
+2023-07-07 00:59:07,434 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] context: null
+2023-07-07 00:59:07,434 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] admin
+2023-07-07 00:59:07,439 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 00:59:07,439 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 00:59:07,442 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 00:59:07,442 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 00:59:07,443 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] authority: [ADMIN]
+2023-07-07 01:10:37,618 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Autenticando al usuario admin
+2023-07-07 01:10:37,643 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 01:10:37,650 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:37,762 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 01:10:37,762 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 01:10:37,765 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:37,765 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Usuario autenticado AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:10:37,765 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 01:10:37,766 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODczMTgzNywiaWF0IjoxNjg4NzAzMDM3LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.T1YxK44NHObVg-uKY5YXuQRSrbIIa9IWEaxT2FY_H0o
+2023-07-07 01:10:37,783 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 01:10:37,787 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:37,788 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 01:10:38,531 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] username: admin
+2023-07-07 01:10:38,531 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] context: null
+2023-07-07 01:10:38,531 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 01:10:38,538 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:38,539 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:10:38,553 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 01:10:38,555 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 01:10:38,560 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] authority: [ADMIN]
+2023-07-07 01:10:51,904 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] username: admin
+2023-07-07 01:10:51,906 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] context: null
+2023-07-07 01:10:51,906 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] admin
+2023-07-07 01:10:51,910 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:51,911 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:10:51,914 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 01:10:51,914 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] ADMIN
+2023-07-07 01:10:51,915 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-7] authority: [ADMIN]
+2023-07-07 01:10:51,918 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-7] Booking(id=03efa77a-5c33-3c89-bd96-1e378ee50e3e, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=null, surname=null, licenseNumber=null, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=null, surname=null, dni=0, dischargedDate=Fri Jul 07 01:10:51 UYT 2023, homeAddress=null))
+2023-07-07 01:10:51,925 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-7] Optional[Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=1e40db92-93ea-4737-8a11-75079c4b2c47, address=Tacuarembó, number=null, location=null, province=null))]
+2023-07-07 01:10:51,938 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-7] Booking(id=03efa77a-5c33-3c89-bd96-1e378ee50e3e, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=null, address=Tacuarembó, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Thu Jul 06 21:00:00 UYT 2023, homeAddress=null))
+2023-07-07 01:10:51,960 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-7] THE ULTIMATE BOOKING: Booking(id=03efa77a-5c33-3c89-bd96-1e378ee50e3e, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=6b5f722e-e9c9-3af8-b03d-70f4df9fe466, name=Earphones, surname=Gonzalez, licenseNumber=789127, homeAddress=HomeAddress(id=1e40db92-93ea-4737-8a11-75079c4b2c47, address=Tacuarembó, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=2023-07-07 00:06:44.447, homeAddress=null))
+2023-07-07 01:10:54,570 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] username: admin
+2023-07-07 01:10:54,570 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] context: null
+2023-07-07 01:10:54,572 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 01:10:54,577 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:10:54,579 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:10:54,583 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 01:10:54,584 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 01:10:54,585 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] authority: [ADMIN]
+2023-07-07 01:11:10,578 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] username: admin
+2023-07-07 01:11:10,579 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] context: null
+2023-07-07 01:11:10,579 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] admin
+2023-07-07 01:11:10,582 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:10,582 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:10,585 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:10,585 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:10,586 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] authority: [ADMIN]
+2023-07-07 01:11:28,489 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] username: admin
+2023-07-07 01:11:28,490 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] context: null
+2023-07-07 01:11:28,491 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] admin
+2023-07-07 01:11:28,495 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:28,495 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:28,500 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 01:11:28,500 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 01:11:28,501 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] authority: [ADMIN]
+2023-07-07 01:11:28,508 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-5] Optional.empty
+2023-07-07 01:11:30,431 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 01:11:30,433 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 01:11:30,433 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 01:11:30,437 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:30,438 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:30,443 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 01:11:30,444 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 01:11:30,444 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 01:11:33,525 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] username: admin
+2023-07-07 01:11:33,526 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] context: null
+2023-07-07 01:11:33,526 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] admin
+2023-07-07 01:11:33,530 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:33,531 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:33,534 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:33,535 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:33,535 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] authority: [ADMIN]
+2023-07-07 01:11:40,879 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] username: admin
+2023-07-07 01:11:40,880 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] context: null
+2023-07-07 01:11:40,880 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] admin
+2023-07-07 01:11:40,882 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:40,882 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:40,884 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 01:11:40,884 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 01:11:40,884 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] authority: [ADMIN]
+2023-07-07 01:11:40,886 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-5] Booking(id=f3a9d44d-b2b3-3cca-9b02-53b95a33df23, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=8542516f-8870-373d-bd1d-aba1daaaf0a1, name=null, surname=null, licenseNumber=null, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=null, surname=null, dni=0, dischargedDate=Fri Jul 07 01:11:40 UYT 2023, homeAddress=null))
+2023-07-07 01:11:40,894 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-5] Optional[Dentist(id=8542516f-8870-373d-bd1d-aba1daaaf0a1, name=Franco, surname=Mnasias, licenseNumber=12321, homeAddress=HomeAddress(id=4a8fa56e-8f42-4b8e-a776-42b49e080da5, address=ALla, number=null, location=null, province=null))]
+2023-07-07 01:11:40,905 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-5] Booking(id=f3a9d44d-b2b3-3cca-9b02-53b95a33df23, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=8542516f-8870-373d-bd1d-aba1daaaf0a1, name=Franco, surname=Mnasias, licenseNumber=12321, homeAddress=HomeAddress(id=null, address=ALla, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Thu Jul 06 21:00:00 UYT 2023, homeAddress=null))
+2023-07-07 01:11:40,912 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-5] THE ULTIMATE BOOKING: Booking(id=f3a9d44d-b2b3-3cca-9b02-53b95a33df23, creationDate=2023-07-07, bookingDate=2023-07-08, timeSlot=3, dentist=Dentist(id=8542516f-8870-373d-bd1d-aba1daaaf0a1, name=Franco, surname=Mnasias, licenseNumber=12321, homeAddress=HomeAddress(id=4a8fa56e-8f42-4b8e-a776-42b49e080da5, address=ALla, number=null, location=null, province=null)), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=2023-07-07 00:06:44.447, homeAddress=null))
+2023-07-07 01:11:42,345 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 01:11:42,346 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 01:11:42,346 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 01:11:42,348 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:42,355 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:42,362 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 01:11:42,370 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 01:11:42,371 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 01:11:46,110 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] username: admin
+2023-07-07 01:11:46,111 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] context: null
+2023-07-07 01:11:46,111 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] admin
+2023-07-07 01:11:46,123 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user: Optional[AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)]
+2023-07-07 01:11:46,126 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] userDetails: AppUser(id=8c28e85b-c5f8-4b54-8145-c7d4babf44a4, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$e5ohkCcQ8cJ7k85017nCSOjpEQFY3T8UyIuvU2e4ZE.MSKFxAz.ia, appUserRole=ADMIN)
+2023-07-07 01:11:46,136 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:46,136 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] ADMIN
+2023-07-07 01:11:46,136 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-2] authority: [ADMIN]
+2023-07-07 01:12:07,895 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Autenticando al usuario user
+2023-07-07 01:12:07,895 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user
+2023-07-07 01:12:07,899 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:12:08,007 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] USER
+2023-07-07 01:12:08,007 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user
+2023-07-07 01:12:08,010 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-7] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:12:08,010 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Usuario autenticado AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:12:08,011 INFO c.d.d.e.AppUser [http-nio-8080-exec-7] USER
+2023-07-07 01:12:08,011 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-7] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1c2VyIiwiZXhwIjoxNjg4NzMxOTI4LCJpYXQiOjE2ODg3MDMxMjgsInJvbCI6eyJhdXRob3JpdHkiOiJVU0VSIn19.3WIPZpStnwQLcDi4MtUgUrOn6ZLOXPdNXokU46quTVc
+2023-07-07 01:12:08,029 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user
+2023-07-07 01:12:08,036 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-2] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:12:08,037 INFO c.d.d.e.AppUser [http-nio-8080-exec-2] USER
+2023-07-07 01:12:08,752 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] username: user
+2023-07-07 01:12:08,756 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] context: null
+2023-07-07 01:12:08,770 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user
+2023-07-07 01:12:08,794 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:12:08,797 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:12:08,820 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] USER
+2023-07-07 01:12:08,821 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] USER
+2023-07-07 01:12:08,821 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] authority: [USER]
+2023-07-07 01:13:08,116 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] username: user
+2023-07-07 01:13:08,116 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] context: null
+2023-07-07 01:13:08,116 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user
+2023-07-07 01:13:08,131 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:13:08,138 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:13:08,144 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] USER
+2023-07-07 01:13:08,145 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] USER
+2023-07-07 01:13:08,146 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] authority: [USER]
+2023-07-07 01:13:15,650 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] username: user
+2023-07-07 01:13:15,650 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] context: null
+2023-07-07 01:13:15,650 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user
+2023-07-07 01:13:15,653 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:13:15,653 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:13:15,655 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] USER
+2023-07-07 01:13:15,655 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] USER
+2023-07-07 01:13:15,655 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] authority: [USER]
+2023-07-07 01:13:25,670 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] username: user
+2023-07-07 01:13:25,673 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] context: null
+2023-07-07 01:13:25,673 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user
+2023-07-07 01:13:25,678 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:13:25,678 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:13:25,683 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] USER
+2023-07-07 01:13:25,685 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] USER
+2023-07-07 01:13:25,685 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] authority: [USER]
+2023-07-07 01:14:04,930 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] username: user
+2023-07-07 01:14:04,930 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] context: null
+2023-07-07 01:14:04,931 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user
+2023-07-07 01:14:04,934 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:14:04,934 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:14:04,936 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] USER
+2023-07-07 01:14:04,936 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] USER
+2023-07-07 01:14:04,940 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] authority: [USER]
+2023-07-07 01:14:07,842 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] username: user
+2023-07-07 01:14:07,842 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] context: null
+2023-07-07 01:14:07,842 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user
+2023-07-07 01:14:07,845 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:14:07,845 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:14:07,849 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] USER
+2023-07-07 01:14:07,849 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] USER
+2023-07-07 01:14:07,850 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] authority: [USER]
+2023-07-07 01:14:19,984 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: user
+2023-07-07 01:14:19,985 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 01:14:19,987 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user
+2023-07-07 01:14:19,995 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:14:19,996 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:14:20,009 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] USER
+2023-07-07 01:14:20,011 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] USER
+2023-07-07 01:14:20,012 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [USER]
+2023-07-07 01:14:41,147 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] username: user
+2023-07-07 01:14:41,148 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] context: null
+2023-07-07 01:14:41,148 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user
+2023-07-07 01:14:41,151 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)]
+2023-07-07 01:14:41,152 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] userDetails: AppUser(id=33a5d377-df76-4162-9d71-68cef1ce57fb, name=user, username=user, email=user@gmail.com, password=$2a$10$bS8.Ai7fU55jZPbagGf.J.GJbUXwZzMRvRWnFoRaVrk274K53n3kG, appUserRole=USER)
+2023-07-07 01:14:41,158 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] USER
+2023-07-07 01:14:41,159 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] USER
+2023-07-07 01:14:41,159 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-10] authority: [USER]
+2023-07-07 07:38:38,347 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 476 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 07:38:38,390 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 07:40:42,051 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 540 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 07:40:42,057 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 07:43:35,898 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 611 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 07:43:35,900 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 07:54:54,393 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 767 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 07:54:54,396 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:03:27,697 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 992 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:03:27,711 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:05:34,596 INFO c.d.d.s.DentistServiceTest [main] Starting DentistServiceTest using Java 17.0.7 with PID 1088 (started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:05:34,600 INFO c.d.d.s.DentistServiceTest [main] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:05:44,297 INFO c.d.d.s.DentistServiceTest [main] Started DentistServiceTest in 10.376 seconds (process running for 16.427)
+2023-07-07 08:05:44,817 INFO c.d.d.s.i.PatientService [main] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:05:44 UYT 2023, homeAddress=null)
+2023-07-07 08:05:44,818 INFO c.d.d.s.i.PatientService [main] homeAddress: null
+2023-07-07 08:05:44,936 INFO c.d.d.s.i.DentistService [main] Optional.empty
+2023-07-07 08:05:45,289 INFO c.d.d.s.i.DentistService [main] Optional[Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=HomeAddress(id=c39f29cc-b930-361f-b8e3-a01ffa62590c, address=Calle 123, number=123, location=Hear, province=Tacuarembo))]
+2023-07-07 08:05:45,306 INFO c.d.d.s.i.DentistService [main] Optional[Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=HomeAddress(id=c39f29cc-b930-361f-b8e3-a01ffa62590c, address=Calle 123, number=123, location=Hear, province=Tacuarembo))]
+2023-07-07 08:05:45,323 INFO c.d.d.s.i.DentistService [main] Optional[Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Updated Juanito, surname=Perez, licenseNumber=12345678, homeAddress=HomeAddress(id=c39f29cc-b930-361f-b8e3-a01ffa62590c, address=Calle 123, number=123, location=Hear, province=Tacuarembo))]
+2023-07-07 08:05:45,342 INFO c.d.d.s.i.DentistService [main] Optional.empty
+2023-07-07 08:05:45,356 INFO c.d.d.s.i.DentistService [main] Optional[Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=HomeAddress(id=c39f29cc-b930-361f-b8e3-a01ffa62590c, address=Calle 123, number=123, location=Hear, province=Tacuarembo))]
+2023-07-07 08:06:09,432 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 1201 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:06:09,435 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:09:01,643 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 1289 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:09:01,646 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:13:07,766 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 1410 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:13:07,768 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:21:18,611 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 1516 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:21:18,615 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:22:26,142 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 1587 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:22:26,145 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:22:41,793 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 17.0.7 with PID 1651 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:22:41,796 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:29:44,371 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 309835 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:29:44,374 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:29:54,342 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 12.195 seconds (process running for 16.107)
+2023-07-07 08:29:54,741 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:29:54 UYT 2023, homeAddress=null)
+2023-07-07 08:29:54,742 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:29:54,940 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:50:14,568 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 309835 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:50:14,570 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:50:16,852 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.435 seconds (process running for 1238.617)
+2023-07-07 08:50:17,104 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:50:17 UYT 2023, homeAddress=null)
+2023-07-07 08:50:17,105 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:50:17,127 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:50:57,673 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:50:57,676 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:51:06,683 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 10.047 seconds (process running for 10.625)
+2023-07-07 08:51:07,265 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:51:07 UYT 2023, homeAddress=null)
+2023-07-07 08:51:07,266 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:51:07,498 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:54:07,484 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:54:07,485 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:54:10,613 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 3.253 seconds (process running for 194.555)
+2023-07-07 08:54:10,875 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:54:10 UYT 2023, homeAddress=null)
+2023-07-07 08:54:10,876 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:54:10,902 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:54:12,553 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:54:12,554 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:54:14,579 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.1 seconds (process running for 198.522)
+2023-07-07 08:54:14,871 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:54:14 UYT 2023, homeAddress=null)
+2023-07-07 08:54:14,872 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:54:14,898 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:57:04,175 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:57:04,176 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:57:07,182 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 3.053 seconds (process running for 371.124)
+2023-07-07 08:57:07,484 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:57:07 UYT 2023, homeAddress=null)
+2023-07-07 08:57:07,484 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:57:07,532 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:57:09,295 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:57:09,295 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:57:10,713 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.469 seconds (process running for 374.656)
+2023-07-07 08:57:10,982 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:57:10 UYT 2023, homeAddress=null)
+2023-07-07 08:57:10,982 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:57:11,006 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 08:57:34,556 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 316021 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 08:57:34,557 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 08:57:36,659 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.212 seconds (process running for 400.601)
+2023-07-07 08:57:36,885 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 08:57:36 UYT 2023, homeAddress=null)
+2023-07-07 08:57:36,885 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 08:57:36,909 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:03:43,920 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 319974 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:03:43,923 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:03:53,798 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 10.918 seconds (process running for 12.449)
+2023-07-07 09:03:54,360 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:03:54 UYT 2023, homeAddress=null)
+2023-07-07 09:03:54,361 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:04:01,909 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] username: user
+2023-07-07 09:04:01,910 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] context: null
+2023-07-07 09:04:01,911 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user
+2023-07-07 09:04:02,115 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional.empty

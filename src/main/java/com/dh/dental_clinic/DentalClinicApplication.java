@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class DentalClinicApplication {
 
 	public static void main(String[] args) {
+		
 		SpringApplication.run(DentalClinicApplication.class, args);
 	}
 

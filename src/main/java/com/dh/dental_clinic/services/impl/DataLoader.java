@@ -56,6 +56,9 @@ public class DataLoader implements ApplicationRunner {
     userRepository.save(new AppUser("admin", "admin", "admin@gmail.com", password, AppUserRole.ADMIN));
     userRepository.save(new AppUser("user", "user", "user@gmail.com", password2, AppUserRole.USER));
 
+    //Credenciales para acceder como Admin: Username: admin, Password: admin
+    //Credenciales para acceder como User: Username: user, Password: user
+
   }
 
 }

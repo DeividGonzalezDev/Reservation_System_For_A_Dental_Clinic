@@ -4,6 +4,7 @@ import {
   saveBooking,
   findAllBookings,
 } from "./fetchs.js";
+import { getCookie } from "./utilsFunctions.js";
 import { showAllUserBookings } from "./components/showAllUserBookings.js";
 import { homePage } from "./components/homePage.js";
 import { showAllDentits } from "./components/showAllDentists.js";
@@ -26,9 +27,14 @@ const dentistMenu = document.getElementById("odontologos-menu");
 const userRole = document.querySelector(".user-role");
 
 // Event Listeners
+//abre el pop-up de reserva
 bookingButton.addEventListener("click", () => {
-  defaultModal.classList.toggle("hidden");
-  backgroundModal.classList.toggle("hidden");
+  if(getCookie("userData") !== null){
+    defaultModal.classList.toggle("hidden");
+    backgroundModal.classList.toggle("hidden");
+  }else{
+    window.location.href = "/auth";
+  }
 });
 
 closeModal.addEventListener("click", () => {
@@ -37,27 +43,26 @@ closeModal.addEventListener("click", () => {
 });
 
 //verfifica si es un usuario Admin
-async function isAdmin() {
-  const res = await fetch("http://localhost:8080/dentists/save");
-  console.log(res);
-  if(res.status === 403){
-    return false;
-  }else{
+function isAdmin() {
+  let cookieValue = getCookie("userData");
+  if(cookieValue && cookieValue.appUserRole == "ADMIN"){
     return true;
+  }else{
+    return false;
   }
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-  if(await isAdmin() == false){
+document.addEventListener("DOMContentLoaded",  () => {
+  if(isAdmin() == false){
     dentistMenu.parentNode.remove();
     const userBookingsLink = document.createElement('a');
     userBookingsLink.id = 'user-bookings';
-    userBookingsLink.href = '#';
+    userBookingsLink.href = getCookie("userData") !== null ? '#' : '/auth';
     userBookingsLink.className = 'text-white bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-primary-600 dark:hover:bg-primary-700 focus:outline-none dark:focus:ring-primary-800 admin-dashboard-button';
-    userBookingsLink.innerText = 'Mis Reservas';
+    userBookingsLink.innerText = getCookie("userData") !== null ? 'Mis Reservas' : 'Inicia Sesión';
     
     showUserBookings.parentNode.replaceChild(userBookingsLink, showUserBookings);
-    userRole.innerText = "User"
+    userRole.innerText =getCookie("userData") !== null ?  getCookie("userData").name : "User";
   };
 })
 
@@ -65,13 +70,15 @@ document.addEventListener("DOMContentLoaded", async () => {
 //Agrega los odontologos al DentistsList de el Modal de reservaciones
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("ok");
-  const dentists = await findAllDentists();
-  dentists.forEach((dentist) => {
-    const option = document.createElement("option");
-    option.value = dentist.id;
-    option.innerHTML = dentist.name;
-    dentistsList.appendChild(option);
-  });
+  if(getCookie("userData") !== null){
+    const dentists = await findAllDentists();
+    dentists.forEach((dentist) => {
+      const option = document.createElement("option");
+      option.value = dentist.id;
+      option.innerHTML = dentist.name;
+      dentistsList.appendChild(option);
+    });
+  }
 });
 
 

@@ -30,13 +30,25 @@ public class AppUser implements UserDetails {
  @GeneratedValue
  private UUID id; 
 
+ @Getter
+ @Setter
  private String name;
+
+ @Setter
  private String username;
+
+ @Getter
+ @Setter
  private String email;
+
+ @Setter
  private String password;
 
+ @Getter
+ @Setter
  @Enumerated(EnumType.STRING)
  private AppUserRole appUserRole;
+
 
 public AppUser(String name, String username, String email, String password,
    AppUserRole appUserRole) {

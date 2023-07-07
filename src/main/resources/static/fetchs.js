@@ -1,3 +1,5 @@
+import { getCookie } from "./utilsFunctions.js";
+
 export async function saveDentist(
   name,
   surname,
@@ -8,6 +10,7 @@ export async function saveDentist(
       method: "POST",
       headers: {
         "Content-Type": "application/json",
+        Authorization: "Bearer " + getCookie("userData").jwt,
       },
       body: JSON.stringify({
         name: name,
@@ -31,7 +34,12 @@ export async function saveDentist(
 }
 
 export async function findAllDentists() {
-  const res = await fetch("http://localhost:8080/dentists/findAll");
+  const res = await fetch("http://localhost:8080/dentists/findAll", {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + getCookie("userData").jwt,
+    }
+  });
   let error = {};
   let resParsed = {};
   if(res.status === 200){
@@ -44,7 +52,12 @@ export async function findAllDentists() {
 }
 
 export async function findDentistById(id) {
-  const res = await fetch("http://localhost:8080/dentists/findById?id=" + id);
+  const res = await fetch("http://localhost:8080/dentists/findById?id=" + id, {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + getCookie("userData").jwt,
+    }
+  });
   let error = {};
   let resParsed = {};
   if(res.status === 200){
@@ -57,7 +70,12 @@ export async function findDentistById(id) {
 }
 
 export async function deleteDentistById(id) {
-  const res = await fetch("http://localhost:8080/dentists/delete?id=" + id);
+  const res = await fetch("http://localhost:8080/dentists/delete?id=" + id, {
+    method: "DELETE",
+    headers: {
+      Authorization: "Bearer " + getCookie("userData").jwt,
+    }
+  });
   let error = {};
   let resParsed = {};
   if(res.status === 200){
@@ -74,6 +92,7 @@ export async function updateDentistById(id=null, name, surname, licenseNumber, h
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + getCookie("userData").jwt,
     },
     body: JSON.stringify({
       id: id,
@@ -100,6 +119,7 @@ export async function saveBooking(patientId, dentistId, date, timeStamp) {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
+      Authorization: "Bearer " + getCookie("userData").jwt,
     },
     body: JSON.stringify({
       patient: {
@@ -125,7 +145,12 @@ export async function saveBooking(patientId, dentistId, date, timeStamp) {
 
 
 export async function findAllBookings() {
-  const res = await fetch("http://localhost:8080/booking/findAll");
+  const res = await fetch("http://localhost:8080/booking/findAll", {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + getCookie("userData").jwt,
+    }
+  });
   let error = {};
   let resParsed = {};
   if(res.status === 200){
@@ -138,7 +163,12 @@ export async function findAllBookings() {
 }
 
 export async function findBookingById(id) {
-  const res = await fetch("http://localhost:8080/booking/findById?id=" + id);
+  const res = await fetch("http://localhost:8080/booking/findById?id=" + id, {
+    method: "GET",
+    headers: {
+      Authorization: "Bearer " + getCookie("userData").jwt,
+    }
+  });
   let error = {};
   let resParsed = {};
   if(res.status === 200){

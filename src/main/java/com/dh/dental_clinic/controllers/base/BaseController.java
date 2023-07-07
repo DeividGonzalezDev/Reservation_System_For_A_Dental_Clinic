@@ -3,8 +3,9 @@ package com.dh.dental_clinic.controllers.base;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.transaction.TransactionSystemException;
@@ -23,7 +24,7 @@ import jakarta.validation.ConstraintViolationException;
 
 @RestControllerAdvice
 public class BaseController {
-  private static final Logger logger = LogManager.getLogger(BaseController.class);
+  private static final Logger logger = LoggerFactory.getLogger(BaseController.class);
 
   
   /**
@@ -44,7 +45,7 @@ public class BaseController {
 
         errors.put(fieldName, message);
       });
-      logger.error(ex);
+      logger.error(ex.getMessage());
       ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
           "Los Datos introducidos no son válidos", errors);
       return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
@@ -65,7 +66,7 @@ public class BaseController {
       ConstraintViolationException constraintViolationException = (ConstraintViolationException) ex.getRootCause();
       handleConstraintViolationException(constraintViolationException);
     }
-    logger.error(ex.getRootCause());
+    logger.error(ex.getMessage());
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
         "Se ha producido un error, por favor intentelo mas tarde");
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
@@ -82,7 +83,7 @@ public class BaseController {
   @ExceptionHandler(TheEntityAlredyExistsException.class)
   public ResponseEntity<ErrorResponse> handleTheEntityAlredyExistsException(TheEntityAlredyExistsException ex) {
     logger.error("There has been an error because the entity already exists in the database :(");
-    logger.error(ex);
+    logger.error(ex.getMessage());
     Map<String, Object> errors = new HashMap<>();
     errors.put("entity", ex.getEntity());
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
@@ -102,7 +103,7 @@ public class BaseController {
   @ExceptionHandler(NoEntityToUpdateException.class)
   public ResponseEntity<ErrorResponse> handleNoEntityToUpdateException(NoEntityToUpdateException ex) {
     logger.error("There has been an error because the entity to be updated does not exist in the database :(");
-    logger.error(ex);
+    logger.error(ex.getMessage());
     Map<String, Object> errors = new HashMap<>();
     errors.put("entity", ex.getEntity());
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
@@ -119,7 +120,7 @@ public class BaseController {
   @ExceptionHandler(NoEntityToDeleteException.class)
   public ResponseEntity<ErrorResponse> handleNoEntityToDeleteException(NoEntityToDeleteException ex) {
     logger.error("There has been an error because the entity to be deleted does not exist in the database :(");
-    logger.error(ex);
+    logger.error(ex.getMessage());
     Map<String, Object> errors = new HashMap<>();
     errors.put("entityId", ex.getId());
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
@@ -131,7 +132,7 @@ public class BaseController {
   @ExceptionHandler(TheNecessaryEntitiesForTheOperationDoNotExistException.class)
   public ResponseEntity<ErrorResponse> handleTheNecessaryEntitiesForTheOperationDoNotExistException(TheNecessaryEntitiesForTheOperationDoNotExistException ex) {
     logger.error("There has been an error because the necessary entities does not exist in the database :(");
-    logger.error(ex);
+    logger.error(ex.getMessage());
     ErrorResponse errorResponse = new ErrorResponse(HttpStatus.BAD_REQUEST.value(),
         "La entidad no existe", ex.getEntities());
     return ResponseEntity.status(HttpStatus.BAD_REQUEST).body(errorResponse);
