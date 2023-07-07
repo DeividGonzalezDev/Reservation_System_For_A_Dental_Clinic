@@ -11,7 +11,7 @@ import { showAllDentits } from "./components/showAllDentists.js";
 
 // selectors
 const bookingButton = document.querySelector(".booking-button");
-const odontologosMenu = document.querySelector(".odontologos-menu");
+
 const defaultModal = document.getElementById("defaultModal");
 const backgroundModal = document.querySelector(".background-modal");
 const closeModal = document.getElementById("closeModal");
@@ -26,6 +26,7 @@ const homePageMenu = document.getElementById("home");
 const dentistMenu = document.getElementById("odontologos-menu");
 const userRole = document.querySelector(".user-role");
 
+console.log(dentistMenu);
 // Event Listeners
 //abre el pop-up de reserva
 bookingButton.addEventListener("click", () => {
@@ -165,7 +166,8 @@ showUserBookings.addEventListener("click", async () => {
   
 
   
-  dentistMenu.addEventListener("click", async () => {
+  dentistMenu.addEventListener("click", async (event) => {
+    event.preventDefault();
     mainContainer.innerHTML = showAllDentits();
     const dentistsTable = document.getElementById("dentists-table-body");
     const newDentistModalButton = document.getElementById("newDentistModalButton");

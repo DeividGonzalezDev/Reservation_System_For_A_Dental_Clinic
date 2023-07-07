@@ -550,3 +550,221 @@ org.springframework.security.authentication.BadCredentialsException: Bad credent
 2023-07-07 09:04:01,910 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] context: null
 2023-07-07 09:04:01,911 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user
 2023-07-07 09:04:02,115 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional.empty
+2023-07-07 09:06:42,883 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:06:42,889 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:06:50,016 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 7.931 seconds (process running for 9.049)
+2023-07-07 09:06:50,451 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:06:50 UYT 2023, homeAddress=null)
+2023-07-07 09:06:50,452 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:06:50,633 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:07:05,170 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] username: user
+2023-07-07 09:07:05,171 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] context: null
+2023-07-07 09:07:05,172 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user
+2023-07-07 09:07:05,299 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=a8f0df92-7695-4046-ba52-54ac1ca72f08, name=user, username=user, email=user@gmail.com, password=$2a$10$7hNgJ1P61sf3HJ2a2Q5MZeTRh9FnOm4q1/f0ihVKQCuEK.D1O9Ooq, appUserRole=USER)]
+2023-07-07 09:07:05,300 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] userDetails: AppUser(id=a8f0df92-7695-4046-ba52-54ac1ca72f08, name=user, username=user, email=user@gmail.com, password=$2a$10$7hNgJ1P61sf3HJ2a2Q5MZeTRh9FnOm4q1/f0ihVKQCuEK.D1O9Ooq, appUserRole=USER)
+2023-07-07 09:07:05,309 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] USER
+2023-07-07 09:07:05,318 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] USER
+2023-07-07 09:07:05,320 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] authority: [USER]
+2023-07-07 09:07:37,978 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] username: user
+2023-07-07 09:07:37,979 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] context: null
+2023-07-07 09:07:37,979 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user
+2023-07-07 09:07:37,984 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional[AppUser(id=a8f0df92-7695-4046-ba52-54ac1ca72f08, name=user, username=user, email=user@gmail.com, password=$2a$10$7hNgJ1P61sf3HJ2a2Q5MZeTRh9FnOm4q1/f0ihVKQCuEK.D1O9Ooq, appUserRole=USER)]
+2023-07-07 09:07:37,986 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] userDetails: AppUser(id=a8f0df92-7695-4046-ba52-54ac1ca72f08, name=user, username=user, email=user@gmail.com, password=$2a$10$7hNgJ1P61sf3HJ2a2Q5MZeTRh9FnOm4q1/f0ihVKQCuEK.D1O9Ooq, appUserRole=USER)
+2023-07-07 09:07:37,990 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] USER
+2023-07-07 09:07:37,991 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] USER
+2023-07-07 09:07:37,992 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-9] authority: [USER]
+2023-07-07 09:07:38,065 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-9] Booking(id=62189940-6941-3c9e-81a6-e7e3557d5d81, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=null, surname=null, licenseNumber=null, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=null, surname=null, dni=0, dischargedDate=Fri Jul 07 09:07:38 UYT 2023, homeAddress=null))
+2023-07-07 09:07:38,075 INFO c.d.d.s.i.DentistService [http-nio-8080-exec-9] Optional[Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=null)]
+2023-07-07 09:07:38,115 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-9] Booking(id=62189940-6941-3c9e-81a6-e7e3557d5d81, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Thu Jul 06 21:00:00 UYT 2023, homeAddress=null))
+2023-07-07 09:07:38,149 INFO c.d.d.s.i.BookingService [http-nio-8080-exec-9] THE ULTIMATE BOOKING: Booking(id=62189940-6941-3c9e-81a6-e7e3557d5d81, creationDate=2023-07-07, bookingDate=2023-07-07, timeSlot=2, dentist=Dentist(id=25d55ad2-83aa-300a-b464-c76d713c07ad, name=Juan, surname=Perez, licenseNumber=12345678, homeAddress=null), patient=Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=2023-07-07 09:06:50.358, homeAddress=null))
+2023-07-07 09:10:21,496 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:10:21,504 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:10:23,966 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.596 seconds (process running for 222.999)
+2023-07-07 09:10:24,262 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:10:24 UYT 2023, homeAddress=null)
+2023-07-07 09:10:24,264 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:10:24,299 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:12:20,091 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:12:20,092 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:12:21,591 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.589 seconds (process running for 340.623)
+2023-07-07 09:12:21,817 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:12:21 UYT 2023, homeAddress=null)
+2023-07-07 09:12:21,817 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:12:21,844 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:14:38,732 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:14:38,732 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:14:40,356 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.733 seconds (process running for 479.389)
+2023-07-07 09:14:40,586 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:14:40 UYT 2023, homeAddress=null)
+2023-07-07 09:14:40,586 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:14:40,610 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:14:51,265 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:14:51,268 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:14:52,500 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.28 seconds (process running for 491.533)
+2023-07-07 09:14:52,724 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:14:52 UYT 2023, homeAddress=null)
+2023-07-07 09:14:52,724 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:14:52,740 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:15:32,357 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:15:32,358 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:15:33,649 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.335 seconds (process running for 532.682)
+2023-07-07 09:15:33,872 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:15:33 UYT 2023, homeAddress=null)
+2023-07-07 09:15:33,873 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:15:33,900 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:16:28,600 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:16:28,601 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:16:29,899 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.334 seconds (process running for 588.932)
+2023-07-07 09:16:30,267 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:16:30 UYT 2023, homeAddress=null)
+2023-07-07 09:16:30,267 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:16:30,281 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:18:37,933 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:18:37,933 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:18:38,999 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.117 seconds (process running for 718.032)
+2023-07-07 09:18:39,249 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:18:39 UYT 2023, homeAddress=null)
+2023-07-07 09:18:39,250 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:18:39,280 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:19:06,919 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:19:06,919 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:19:33,675 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:19:33,676 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:19:35,591 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.997 seconds (process running for 774.624)
+2023-07-07 09:19:35,823 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:19:35 UYT 2023, homeAddress=null)
+2023-07-07 09:19:35,824 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:19:35,866 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:19:53,687 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:19:53,688 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:19:55,272 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.667 seconds (process running for 794.305)
+2023-07-07 09:19:55,516 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:19:55 UYT 2023, homeAddress=null)
+2023-07-07 09:19:55,516 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:19:55,539 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:20:06,905 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:20:06,906 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:20:08,247 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.374 seconds (process running for 807.28)
+2023-07-07 09:20:08,475 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:20:08 UYT 2023, homeAddress=null)
+2023-07-07 09:20:08,476 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:20:08,497 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:20:25,942 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:20:25,942 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:20:27,108 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.196 seconds (process running for 826.14)
+2023-07-07 09:20:27,324 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:20:27 UYT 2023, homeAddress=null)
+2023-07-07 09:20:27,324 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:20:27,342 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:22:10,099 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:22:10,099 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:22:11,483 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.459 seconds (process running for 930.516)
+2023-07-07 09:22:11,702 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:22:11 UYT 2023, homeAddress=null)
+2023-07-07 09:22:11,702 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:22:11,721 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:23:05,500 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:23:05,501 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:23:06,629 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.192 seconds (process running for 985.662)
+2023-07-07 09:23:06,859 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:23:06 UYT 2023, homeAddress=null)
+2023-07-07 09:23:06,859 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:23:06,877 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:23:28,481 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:23:28,481 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:23:29,816 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 1.362 seconds (process running for 1008.849)
+2023-07-07 09:23:30,048 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:23:30 UYT 2023, homeAddress=null)
+2023-07-07 09:23:30,048 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:23:30,068 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:30:33,411 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 321114 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:30:33,416 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:30:45,645 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 328375 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:30:45,648 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:43:50,851 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 332568 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:43:50,854 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:43:58,113 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 8.104 seconds (process running for 9.2)
+2023-07-07 09:43:58,515 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:43:58 UYT 2023, homeAddress=null)
+2023-07-07 09:43:58,516 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:43:58,702 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:45:09,717 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 332568 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:45:09,723 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:45:12,049 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.645 seconds (process running for 83.135)
+2023-07-07 09:45:12,275 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:45:12 UYT 2023, homeAddress=null)
+2023-07-07 09:45:12,276 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:45:12,304 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:46:22,941 INFO c.d.d.DentalClinicApplication [restartedMain] Starting DentalClinicApplication using Java 20.0.1 with PID 332568 (/home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic/target/classes started by deividgonzalezdev in /home/deividgonzalezdev/Certified_tech_DEveloper/backendI/dental_clinic)
+2023-07-07 09:46:22,942 INFO c.d.d.DentalClinicApplication [restartedMain] No active profile set, falling back to 1 default profile: "default"
+2023-07-07 09:46:25,023 INFO c.d.d.DentalClinicApplication [restartedMain] Started DentalClinicApplication in 2.136 seconds (process running for 156.11)
+2023-07-07 09:46:25,291 INFO c.d.d.s.i.PatientService [restartedMain] encontrado: Patient(id=5e8667a4-39c6-3f51-85dd-2fcbecf02209, name=admin, surname=admin, dni=87654321, dischargedDate=Fri Jul 07 09:46:25 UYT 2023, homeAddress=null)
+2023-07-07 09:46:25,292 INFO c.d.d.s.i.PatientService [restartedMain] homeAddress: null
+2023-07-07 09:46:25,320 INFO c.d.d.s.i.DentistService [restartedMain] Optional.empty
+2023-07-07 09:46:48,338 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-9] Autenticando al usuario admin
+2023-07-07 09:46:48,439 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] admin
+2023-07-07 09:46:48,719 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:46:48,820 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 09:46:48,820 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] admin
+2023-07-07 09:46:48,824 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-9] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:46:48,824 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-9] Usuario autenticado AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:46:48,825 INFO c.d.d.e.AppUser [http-nio-8080-exec-9] ADMIN
+2023-07-07 09:46:48,922 INFO c.d.d.c.AuthenticateController [http-nio-8080-exec-9] Token generado eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTY4ODc2MjgwOCwiaWF0IjoxNjg4NzM0MDA4LCJyb2wiOnsiYXV0aG9yaXR5IjoiQURNSU4ifX0.pHQTtUCkKIxHmXzeaE-mTb9K1Om6stONZ_Sbau_2mLM
+2023-07-07 09:46:49,008 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] admin
+2023-07-07 09:46:49,017 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-10] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:46:49,026 INFO c.d.d.e.AppUser [http-nio-8080-exec-10] ADMIN
+2023-07-07 09:46:49,681 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] username: admin
+2023-07-07 09:46:49,682 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] context: null
+2023-07-07 09:46:49,683 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] admin
+2023-07-07 09:46:49,704 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-8] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:46:49,705 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:46:49,710 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 09:46:49,711 INFO c.d.d.e.AppUser [http-nio-8080-exec-8] ADMIN
+2023-07-07 09:46:49,711 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-8] authority: [ADMIN]
+2023-07-07 09:49:57,724 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 09:49:57,724 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 09:49:57,724 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 09:49:57,730 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:49:57,730 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:49:57,735 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:49:57,735 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:49:57,735 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 09:50:06,027 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] username: admin
+2023-07-07 09:50:06,028 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] context: null
+2023-07-07 09:50:06,029 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 09:50:06,037 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:50:06,037 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:50:06,041 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 09:50:06,042 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 09:50:06,043 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] authority: [ADMIN]
+2023-07-07 09:52:20,080 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 09:52:20,081 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 09:52:20,081 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 09:52:20,087 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:52:20,095 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:52:20,100 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:52:20,103 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:52:20,103 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 09:52:24,354 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] username: admin
+2023-07-07 09:52:24,355 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] context: null
+2023-07-07 09:52:24,355 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] admin
+2023-07-07 09:52:24,364 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-6] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:52:24,365 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:52:24,369 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 09:52:24,370 INFO c.d.d.e.AppUser [http-nio-8080-exec-6] ADMIN
+2023-07-07 09:52:24,371 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-6] authority: [ADMIN]
+2023-07-07 09:52:25,642 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] username: admin
+2023-07-07 09:52:25,644 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] context: null
+2023-07-07 09:52:25,645 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] admin
+2023-07-07 09:52:25,658 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-3] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:52:25,659 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:52:25,664 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 09:52:25,665 INFO c.d.d.e.AppUser [http-nio-8080-exec-3] ADMIN
+2023-07-07 09:52:25,669 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-3] authority: [ADMIN]
+2023-07-07 09:52:27,197 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] username: admin
+2023-07-07 09:52:27,197 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] context: null
+2023-07-07 09:52:27,200 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] admin
+2023-07-07 09:52:27,209 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-4] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:52:27,210 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:52:27,213 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:52:27,213 INFO c.d.d.e.AppUser [http-nio-8080-exec-4] ADMIN
+2023-07-07 09:52:27,214 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-4] authority: [ADMIN]
+2023-07-07 09:54:43,219 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] username: admin
+2023-07-07 09:54:43,219 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] context: null
+2023-07-07 09:54:43,219 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] admin
+2023-07-07 09:54:43,223 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-5] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:54:43,224 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:54:43,227 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 09:54:43,227 INFO c.d.d.e.AppUser [http-nio-8080-exec-5] ADMIN
+2023-07-07 09:54:43,227 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-5] authority: [ADMIN]
+2023-07-07 09:58:04,815 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] username: admin
+2023-07-07 09:58:04,827 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] context: null
+2023-07-07 09:58:04,827 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] admin
+2023-07-07 09:58:04,854 INFO c.d.d.s.i.AppUserService [http-nio-8080-exec-1] user: Optional[AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)]
+2023-07-07 09:58:04,862 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] userDetails: AppUser(id=7bffd8d4-6d97-4573-8904-6760da67ff4a, name=admin, username=admin, email=admin@gmail.com, password=$2a$10$lIARGFLhdvQGHBO.obqys.vTvt6tt2ivl8At0XvFfT2/nDTCOyoGC, appUserRole=ADMIN)
+2023-07-07 09:58:04,887 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 09:58:04,891 INFO c.d.d.e.AppUser [http-nio-8080-exec-1] ADMIN
+2023-07-07 09:58:04,909 INFO c.d.d.f.JwtRequestFilter [http-nio-8080-exec-1] authority: [ADMIN]

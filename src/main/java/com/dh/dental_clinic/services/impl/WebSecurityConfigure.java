@@ -18,6 +18,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
+import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 
 import com.dh.dental_clinic.entity.AppUserRole;
 import com.dh.dental_clinic.filters.JwtRequestFilter;
@@ -78,9 +79,11 @@ public class WebSecurityConfigure {
             .requestMatchers("/dentists/**").hasAuthority(AppUserRole.ADMIN.name())
             .requestMatchers("/patient/**").hasAuthority(AppUserRole.ADMIN.name())
             .requestMatchers("/booking/**").hasAuthority(AppUserRole.ADMIN.name())
-            .requestMatchers("/").hasAnyAuthority(AppUserRole.ADMIN.name())
-
+            .requestMatchers(AntPathRequestMatcher.antMatcher("/h2-console/**")).hasAuthority(AppUserRole.ADMIN.name())
+            
+            
             .anyRequest().permitAll()
+            
             )
 
             .addFilterBefore(jwtRequestFilter, UsernamePasswordAuthenticationFilter.class)
