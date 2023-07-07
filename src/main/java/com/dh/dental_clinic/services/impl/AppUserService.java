@@ -55,7 +55,7 @@ public class AppUserService implements UserDetailsService{
 
     HttpEntity<AuthenticationReq> httpEntity = new HttpEntity<>(authenticationReq);
 
-    ResponseEntity<TokenInfo> response = restTemplate.postForEntity("http://localhost:8080/authenticate", httpEntity, TokenInfo.class);
+    ResponseEntity<TokenInfo> response = restTemplate.postForEntity("/authenticate", httpEntity, TokenInfo.class);
 
     TokenInfo tokenInfo = response.getBody();
     userDTO.setJwt(tokenInfo == null ? "" : tokenInfo.jwtToken());

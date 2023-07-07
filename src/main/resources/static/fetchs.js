@@ -6,7 +6,7 @@ export async function saveDentist(
   licenseNumber,
   homeAddress = null
 ) {
-    const res = await fetch("http://localhost:8080/dentists/save", {
+    const res = await fetch("/dentists/save", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -34,7 +34,7 @@ export async function saveDentist(
 }
 
 export async function findAllDentists() {
-  const res = await fetch("http://localhost:8080/dentists/findAll", {
+  const res = await fetch("/dentists/findAll", {
     method: "GET",
     headers: {
       Authorization: "Bearer " + getCookie("userData").jwt,
@@ -52,7 +52,7 @@ export async function findAllDentists() {
 }
 
 export async function findDentistById(id) {
-  const res = await fetch("http://localhost:8080/dentists/findById?id=" + id, {
+  const res = await fetch("/dentists/findById?id=" + id, {
     method: "GET",
     headers: {
       Authorization: "Bearer " + getCookie("userData").jwt,
@@ -70,7 +70,7 @@ export async function findDentistById(id) {
 }
 
 export async function deleteDentistById(id) {
-  const res = await fetch("http://localhost:8080/dentists/delete?id=" + id, {
+  const res = await fetch("/dentists/delete?id=" + id, {
     method: "DELETE",
     headers: {
       Authorization: "Bearer " + getCookie("userData").jwt,
@@ -88,7 +88,7 @@ export async function deleteDentistById(id) {
 }
 
 export async function updateDentistById(id=null, name, surname, licenseNumber, homeAddress=null) {
-  const res = await fetch("http://localhost:8080/dentists/update", {
+  const res = await fetch("/dentists/update", {
     method: "PUT",
     headers: {
       "Content-Type": "application/json",
@@ -115,7 +115,7 @@ export async function updateDentistById(id=null, name, surname, licenseNumber, h
 }
 
 export async function saveBooking(patientId, dentistId, date, timeStamp) {
-  const res = await fetch("http://localhost:8080/booking/save", {
+  const res = await fetch("/booking/save", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
@@ -145,7 +145,7 @@ export async function saveBooking(patientId, dentistId, date, timeStamp) {
 
 
 export async function findAllBookings() {
-  const res = await fetch("http://localhost:8080/booking/findAll", {
+  const res = await fetch("/booking/findAll", {
     method: "GET",
     headers: {
       Authorization: "Bearer " + getCookie("userData").jwt,
@@ -163,7 +163,7 @@ export async function findAllBookings() {
 }
 
 export async function findBookingById(id) {
-  const res = await fetch("http://localhost:8080/booking/findById?id=" + id, {
+  const res = await fetch("/booking/findById?id=" + id, {
     method: "GET",
     headers: {
       Authorization: "Bearer " + getCookie("userData").jwt,

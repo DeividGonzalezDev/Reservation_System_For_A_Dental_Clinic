@@ -185,7 +185,7 @@
         const password = document.getElementById("password").value;
 
         try {
-          const res = await fetch("http://localhost:8080/authenticate", {
+          const res = await fetch("/authenticate", {
             method: "POST",
             headers: {
               "Content-Type": "application/json",
@@ -202,7 +202,7 @@
           });
 
           const user = await fetch(
-            `http://localhost:8080/user/findByUsername?username=${username}`
+            `/user/findByUsername?username=${username}`
           ).then(async (response) => {
             if (!response.ok) {
               throw await response.json();
